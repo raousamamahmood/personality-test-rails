@@ -7,9 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <div class='mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 mt-12'>
+      <%= yield %>
+    </div>
   </body>
 </html>
