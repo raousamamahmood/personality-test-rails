@@ -1,24 +1,35 @@
-# README
+# Poject Name
+Personality Test
+# Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implemented a Personality Test App using Ruby on Rails to test whether person is Introvert or Extrovert by giving multiple choice questions and then decide on the base of answers.
+# Configuration
 
-Things you may want to cover:
+## Install gems mentioned in gems file
 
-* Ruby version
+```sh
+bundle install
+```
 
-* System dependencies
+## Prerequisites
 
-* Configuration
+  * ruby 2.7
+  * rails 5.2
 
-* Database creation
+## Database Installation
 
-* Database initialization
+```sh
+sudo apt install postgresql postgresql-contrib
+```
 
-* How to run the test suite
+## Database initialization
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+sudo postgresql-setup initdb
+```
 
-* Deployment instructions
+# Run rails server.
 
-* ...
+```sh
+rails server
+```
