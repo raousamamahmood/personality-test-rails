@@ -15,6 +15,7 @@ class QuestionsController < ApplicationController
   end
 
   def submit
+    # byebug
     params[:selected_option] == 'extrovert' ? @@extrovert += 1 : @@introvert += 1
     next_question = Question.where('id > ?', params[:question_id]).first
     if next_question
