@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<div class='bg-gray-200 p-3 rounded-lg text-xl font-bold text-green-800'>
+  <%= @question_no %>. <%= @question.title %>
+</div>
+
+<%= form_with url: "/tests/#{@question.id}/submit", method: :get, local: true do |form| %>
+  <% @question.options.each do |option| %>
+    <div class = 'flex gap-2 my-4 ml-2 text-lg'>
+      <%= form.radio_button :selected_option, option.option_type, required: true %>
+      <%= form.label :star, option.title, value: option.option_type %>
+    </div>
+  <% end %>
+
+  <%= form.submit "Submit", class: 'text-green-800 bg-green-200 py-2 px-4 rounded-xl text-lg border' %>
+<% end %>
