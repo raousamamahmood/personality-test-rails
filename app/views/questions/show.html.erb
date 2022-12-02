@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <div class='bg-gray-200 p-3 rounded-lg text-xl font-bold text-green-800'>
-  <%= @question_no %>. <%= @question.title %>
+  <%= @question_no+1 %>. <%= @question[:title] %>
 </div>
 
-<%= form_with url: "#{@question.id}/submit", method: :get, local: true do |form| %>
-  <% @question.options.each do |option| %>
+<%= form_with url: "/submit", method: :get, local: true do |form| %>
+  <% @question[:options].each do |option| %>
     <div class = 'flex gap-2 my-2 ml-2 text-lg'>
-      <%= form.radio_button :selected_option, option.option_type, checked: true %>
-      <%= form.label :star, option.title, value: option.option_type %>
+      <%= form.radio_button :selected_option, option[:option_type], checked: true %>
+      <%= form.label :star, option[:title], value: option[:option_type] %>
     </div>
   <% end %>
 

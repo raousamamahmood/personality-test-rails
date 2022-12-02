@@ -1,8 +1,8 @@
-# frozen_string_literal: true
+# # frozen_string_literal: true
 
-# OptionModel
-class Option < ApplicationRecord
-  belongs_to :question
+# # OptionModel
+# class Option < ApplicationRecord
+#   belongs_to :question
 
-  enum option_type: { introvert: 0, extrovert: 1 }
-end
+#   enum option_type: { introvert: 0, extrovert: 1 }
+# end
