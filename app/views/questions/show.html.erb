@@ -5,10 +5,10 @@
 </div>
 
 <%= form_with url: "/tests/#{@question.id}/submit", method: :get, local: true do |form| %>
-  <% @question.options.each do |option| %>
+  <% @question.options.each_with_index do |option, index| %>
     <div class = 'flex gap-2 my-4 ml-2 text-lg'>
-      <%= form.radio_button :selected_option, option.option_type, required: true %>
-      <%= form.label :star, option.title, value: option.option_type %>
+      <%= form.radio_button :selected_option, option.option_type, required: true, id: index%>
+      <%= form.label index, option.title %>
     </div>
   <% end %>
 
