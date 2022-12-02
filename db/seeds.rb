@@ -10,7 +10,7 @@ questions = [
       { title: 'Don’t dare to interrupt them', option_type: 'introvert' },
       { title: 'hink it’s more important to give them some of your time; work can wait', option_type: 'extrovert' },
       { title: 'Listen, but with only with half an ear', option_type: 'introvert' },
-      { title: 'Interrupt and explain that you are really busy at the moment', option_type: 'extrovert' }
+      { title: 'Interrupt and explain that you are really busy at the moment', option_type: 'introvert' }
     ]
   },
   {
@@ -36,8 +36,8 @@ questions = [
     title: 'You are taking part in a guided tour of a museum. You:',
     options: [
       { title: 'Are a bit too far towards the back so don’t really hear what the guide is saying',
-        option_type: 'introvert' },
-      { title: 'Follow the group without question', option_type: 'extrovert' },
+        option_type: 'extrovert' },
+      { title: 'Follow the group without question', option_type: 'introvert' },
       { title: 'Make sure that everyone is able to hear properly', option_type: 'introvert' },
       { title: 'Are right up the front, adding your own comments in a loud voice', option_type: 'extrovert' }
     ]
