@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: personality-test_production
-  username: personality-test
-  password: <%= ENV['PERSONALITY-TEST_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
