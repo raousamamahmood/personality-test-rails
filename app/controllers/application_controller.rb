@@ -2,7 +2,7 @@
 
 # ApplicationController
 class ApplicationController < ActionController::Base
-  rescue_from StandardError, with: :error_handler
+  # rescue_from StandardError, with: :error_handler
 
   protected
 

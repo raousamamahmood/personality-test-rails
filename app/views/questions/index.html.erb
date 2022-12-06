@@ -6,13 +6,13 @@
     <% @questions.each_with_index do |question, index| %>
       <div id='<%= index %>' class='questions hidden'>
         <div class='bg-gray-200 p-3 rounded-lg text-xl font-bold text-green-800'>
-          <%= question.title %>
+          <%= question[:title] %>
         </div>
         <div class='my-3'>
-          <% question.options.each do |option| %>
+          <% question[:options].each do |option| %>
             <%= f.fields_for :answers do |form| %>
               <div class = 'flex gap-2 my-4 ml-2 text-lg'>
-                <%= form.radio_button question.id, option.option_type, required: true, id: option.id %>
+                <%= form.radio_button question[:id], option[:option_type], required: true, id: option.id %>
                 <%= form.label option.id, option.title %>
               </div>
             <% end %>
