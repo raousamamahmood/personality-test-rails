@@ -33,3 +33,8 @@ sudo postgresql-setup initdb
 ```sh
 rails server
 ```
+# Run rspec test cases.
+```sh
+rspec
+```
+
