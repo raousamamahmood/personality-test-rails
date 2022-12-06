@@ -2,7 +2,7 @@
 
 <h1 class='text-4xl font-bold text-red-800 my-5'>Questions</h1>
 <div>
-  <%= form_with url: "/submit", method: :get, local: true do |f| %>
+  <%= form_with url: "/submit", method: :get, local: true do |form| %>
     <% @questions.each_with_index do |question, index| %>
       <div id='<%= index %>' class='questions hidden'>
         <div class='bg-gray-200 p-3 rounded-lg text-xl font-bold text-green-800'>
@@ -10,10 +10,10 @@
         </div>
         <div class='my-3'>
           <% question[:options].each do |option| %>
-            <%= f.fields_for :answers do |form| %>
+            <%= form.fields_for :answers do |f| %>
               <div class = 'flex gap-2 my-4 ml-2 text-lg'>
-                <%= form.radio_button question[:id], option[:option_type], required: true, id: option.id %>
-                <%= form.label option.id, option.title %>
+                <%= f.radio_button question[:title], option[:option_type], required: true, id: option[:title] %>
+                <%= f.label option[:title], option[:title] %>
               </div>
             <% end %>
           <% end %>
@@ -22,7 +22,7 @@
           <button type='button' class='previous-button text-blue-800 bg-blue-200 py-2 px-4 rounded-xl text-lg border' question-index='<%= index %>' >Previous</button>
         <% end %>
         <% if index == @questions.length-1 %>
-          <%= f.submit "Submit", class: 'submit-button text-green-800 bg-green-200 py-2 px-4 rounded-xl text-lg border' %>
+          <%= form.submit "Submit", class: 'submit-button text-green-800 bg-green-200 py-2 px-4 rounded-xl text-lg border' %>
         <% else %>
           <button type='button' class='next-button text-blue-800 bg-blue-200 py-2 px-4 rounded-xl text-lg border' question-index='<%= index %>' >Next</button>
         <% end %>
