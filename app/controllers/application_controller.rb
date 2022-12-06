@@ -4,8 +4,6 @@
 class ApplicationController < ActionController::Base
   rescue_from StandardError, with: :error_handler
 
-  @@answers = {}
-
   protected
 
   def error_handler(exception)
